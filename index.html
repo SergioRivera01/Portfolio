@@ -13,101 +13,204 @@
 <body>
     
     <!-- Menú -->
-    
-    <header>
-        <!--<nav class="navbar navbar-dark bg-primary">
-           
-            <ul class="topnav nav-justified">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#proyects">Proyectos</a></li>
-            <li><a href="#about">Sobre mi</a></li>
-            <li class="right"><a class=" active " href="#contact">Contacto</a></li>
-            </ul> 
-        </nav>-->
-
-        <a name="inicio"><nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;"></a>
-              <a class="navbar-brand" href="#inicio">Inicio</a>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <a class="navbar-brand" href="#proyecto">Proyectos</a>
-                  <a class="navbar-brand" href="#sobremi">Sobre mi</a>
-                  <a class="navbar-brand" href="#contacto">Contacto</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
-            </div>
-          </nav>
+    <header class="row" id="navigation">
+        <div class="col-12">
+            <nav class="navbar navbar-dark  bg-dark navbar-expand-lg  bg-lg-transparent fixed-top">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#target">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="target">
+                    <span class="text-light p-1 brand__text">Sergio Rivera</span>
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item-active me-lg-5"><a href="#Home" class="nav-link text-light">HOME</a>
+                        </li>
+                        <li class="nav-item  me-lg-5"><a href="#About" class="nav-link text-light">ABOUT</a></li>
+                        <li class="nav-item  me-lg-5"><a href="#Projects" class="nav-link text-light ">PROJECTS</a>
+                        </li>
+                        <li class="nav-item  me-lg-5"><a href="contact.html" class="nav-link text-light" target="blank">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
       
 
     <!--Primera impresión-->
     <section >
-        <div id="principal" >
-            <h1>Sergio Rivera Anguita</h1>
-            <h3>Estudiante Desarrollo de Aplicaciones Multiplaforma</h3>    
-            <img src="imagenes/estudiante-icono.png" alt="icono_Estudiante" id="estudiante">
-            
+        <div id="principal" class="col-12 d-flex justify-content-center align-items-center image__background" style=" height:
+        100vh;" id="IntroducingMySelf">
+        <div class="row-col-6 d-flex justify-content-start intro__style">
+            <div class=" col-12 flex-column">
+                <h1 id="Greeting" class="text-light pt-5 typing">Hi!<br>I'm,  Sergio!</h1>
+                <p class="text-light pt-4 pb-4">Nice to meet you!</p>
+                <a class="btn btn-light" href="contact.html" target="blank"><span class="button__font">Let's talk!</span></a>
+            </div>
         </div>
+    </div>
     </section>
     
-    
-    <!--Proyectos-->
-    <a name="proyecto"><section ></a>
-        
-        <div id="proyectos">
-            
-            <h1 class="titulos">Proyectos</h1>
-            <img src="imagenes/proyectos.png" id="logproy">
-            
-            <ul>
-                <li> Escapa del Imperio: pequeño videojuego cuyo único objetivo es esquivar pyotectiles que aparecen de manera aleatoria en la pantalla.</li>
-                <li> 4Players: Página web realizadas mediante las práticas FTC de Grado Medio orientada a la venta de claves de videojuegos más baratas</li>
-                <li> Web personal: pagina web realizada sobre un videojuego de manera personal </li>
-            </ul>
-            
-       </div>
-      
-    </section>
-
 
     <!--Sobre mi-->
-    <a name="sobremi"><section ></a>
-        <div id="sobremi">
-           
-            <h1 class="titulos">Información</h1>
-            <img src="imagenes/informacion.jpg" id="info" alt="informacionlogo">
-            
-           
-            <ul>
-                <ol>Estudiante de Grado Superior Desarrollo de Aplicaciones Multiplaforma en U-Tad. Poseo estudios de Grado Medio en Sistemas Microinformáticos y Redes.</ol> 
-                <ol>También he desarrollado varias páginas webs personales y un pequeño videojuego de uso personal llamado escapa del imperio.</ol>
-           
-                <ol>Me gustan los videojuegos y la programación por eso estudio para poder llegar a ser programado de videojuegos para poder crear algún día mi propio videojuego </ol>
-            
-            </ul> 
-        </div>
-    </section>
-    <!--Contacto-->
-   
-    <a name="contacto"><section id="contacto" ></a>
-            
-           <div id="contactos"> 
-            <h1 class="titulos">Contacto</h1>
-                <div id="imagenes">
-                    <img src="imagenes/correo.png" class="imgcontact" id="imagen">
-                    <img src="imagenes/instagram.png" class="imgcontact" id="imagen2" >
-                    <img src="imagenes/formulario.png" class="imgcontact" id="imagen3">
-                 </div>
-                
-        </section>
+    <div class="row d-flex align-items-center " id="About">
+        <div class="col-12 p-5 bg-dark">
+            <div class="row p-lg-5 d-flex justify-content-center">
+                <div class="col-12 col-lg-6 p-lg-4 justify-content-center">
+                    <h2 class="pt-2 pb-5 text-light title_txt">About Me</h2>
+                    <span class="text-light">
+                        My name is Segio, I'm a Software Development student. I'm currently coursing my
+                        first year at U-tad. I have started to study this because in the future I want to dedicate 
+                        myself to videogame programming or application development. Every day I learn something new 
+                        and I am more convinced that I want to dedicate myself to this.
+                        <br><br>
+                        In my spare time I usually play video games, be with friends, learning new things...
+                        Sometimes I start to program something on my own so as not to lose practice and keep learning
 
-    <footer>
-        <img src="imagenes/logo_u-tad.jpg"
-        
-    </footer>
-   
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--Learning-->
+        <div class="col-12 p-5" id="Learning">
+            <div class="row p-lg-5 d-flex justify-content-center ">
+                <div class="col-12 col-lg-6 p-2 p-lg-5 justify-content-cente align-content-center rounded-3" id="LearningCard">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="pb-2 m-1  title_txt">
+                                What I'm currently learning.
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row pt-2 ps-2 pe-2">
+                        <div class="col-12 p-lg-3 d-flex flex-column">
+                            <h3 class="pb-4 m-1 h4">Programming Languages</h3>
+                            <span class="mt-1 mb-2 ms-2">As I said I'm still learning. And what I've learned
+                                until now is:</span>
+                            <div class="row">
+                                <div class="col-12 pt-1 pb-0 d-flex flex-column">
+                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">HTML</span>
+                                    <div class="progress ms-2 ms-lg-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" id="HTMLBar">
+                                        </div>
+                                    </div>
+                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">CSS</span>
+                                    <div class="progress ms-2 ms-lg-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" id="CSSBar">
+                                        </div>
+                                    </div>
+                                    <span class="pt-2 pb-2 ms-2 ms-lg-4 prog__lang">Java</span>
+                                    <div class="progress ms-2 ms-lg-4">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="JavaBar" style="width: 30%;">
+                                        </div>
+                                    </div>  
+                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">Java Script</span>
+                                    <div class="progress ms-2 ms-lg-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" id="JSBar">
+                                        </div>
+                                    </div>
+                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">MYSQL</span>
+                                    <div class="progress ms-2 ms-lg-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="MYSQLBar">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <span class="mt-2">Also, but not less important:</span>
+                                    <ul class="mt-2">
+                                        <li><span>I've learnt to use <b>Git.</b> </span></li>
+                                        <li><span>
+                                                I'm also familiarized with the Scrum work methodology.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--What's coming next-->
+        <div class="col-12 p-5 bg-dark">
+            <div class="row p-lg-5 d-flex justify-content-center ">
+                <div class="col-12 col-lg-6 p-2 p-lg-5 justify-content-center align-content-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="pb-2 m-1 text-light title_txt">
+                                More information!
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col-12 p-lg-3 d-flex flex-column">
+                            <h3 class="mt-1 mb-4 text-light">Contests</h3>
+                            <span class="text-light  mb-2">I'm always trying to challenge myself and learn during
+                                the process. And trying websites challenges like "CSS, Battles", "Acepta el reto"...
+                                In December I'll try to solve some challenges from "AdventCode". But so far, this is
+                                the only contest I took part in:</span>
+                            <ul class="general__list">
+                                <li class="ms-2 mt-2 mb-3"><span class="text-light mb-2 contest">
+                                        "Las doce
+                                        uvas" - Dec. 2020.
+                                    </span><br><span class="text-light  ms-mb-2">
+                                        I took part in this contest organised by the "Complutense University". I
+                                        solved those challenges with Java... And I achieved the 4th place in the VT
+                                        II category!!</span></li>
+                            </ul>
+                            <h3 class="text-light mt-2">What I'm planning to learn next</h3>
+                            <br>
+                            <span class="text-light ms-2">As soon as I feel more secure enough typing on JavaScript.
+                                I'm planning to learn use some JavaScript library (I haven't decided wich one yet,
+                                maybe Vue). </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Projects -->
+        <div class="col image__background">
+            <div class="row " id="Projects">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="text-light align-self-center p-5 project__title">Projects</h1>
+                    <div class="row">
+                        <div class="col-12 p-lg-5 d-flex flex-lg-row flex-column justify-content-evenly align-content-center">
+                            <div class="card rounded-3 m-2" style="width: 20rem;">
+                                <img class="card-img-top image__card" src="img/ff32f069c1a5b1a9e054534a85202e52.png" alt="Card image cap">
+                                <div class="card-body  d-flex flex-column card__content">
+                                    <h5 class="card-title">Delivery schedule simulator</h5>
+                                    <p class="card-text">You'll be able manage your
+                                        staff
+                                        and see
+                                        how many employees are available to deliver your products.<br>
+                                        HTML + CSS + JS</p>
+                                    <a href="#" class="btn btn-dark" target="">Still on progress</a>
+                                </div>
+                            </div>
+                            <div class="card rounded- m-2" style="width: 20rem;">
+                                <img class="card-img-top image__card" src="img/game.jpg" alt="Card image cap">
+                                <div class="card-body  d-flex flex-column card__content">
+                                    <h5 class="card-title">Square-match! Game</h5>
+                                    <p class="card-text">In this game you have to switch
+                                        the color o the squares by clicking on them. If you get a full match, you
+                                        win. <br>
+                                        HTML + CSS + JS</p>
+                                    <a href="4x4Game/index.html" class="btn btn-primary" target="blank">Check it
+                                        out!</a>
+                                </div>
+                            </div>
+                            <div class="card rounded-3 m-2" style="width: 20rem;">
+                                <img class="card-img-top image__card" src="img/Calculator-pana.png" alt="Card image cap">
+                                <div class="card-body d-flex flex-column card__content">
+                                    <h5 class="card-title">Calculator</h5>
+                                    <p class="card-text">Those maths aren't easy, let me give
+                                        you a hand with that.<br> Simple but effective.<br>
+                                        HTML + CSS + JS</p>
+                                    <a href="#" class="btn btn-dark" target="">Still on progress</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
       
 </body>
 </html>
