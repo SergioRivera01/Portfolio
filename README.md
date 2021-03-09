@@ -1,2 +1,6 @@
 # Portfolio
-hola
+Portfolio de Sergio Rivera Anguita. Contiene información personal, proyectos, conocimientos...
+Todavía está en progreso y no es definitivo con el tiempo se irá actualizando. 
+
+Sergio Rivera Anguita's portfolio. Contains personal information, projects, knowledge ...
+It is still in progress and is not final with time it will be updated.
