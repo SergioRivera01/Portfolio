@@ -1,25 +1,28 @@
 body {
-  
   text-align: center;
 }
 
-#navigation{
+#navigation {
   width: 100%;
-    display: flex;
-    justify-content: end;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  box-sizing: border-box;
+}
+
+div {
+  width: 101%;
 }
 
 .ms-auto {
-  margin-left: auto!important;
+  margin-left: auto !important;
 }
 
 .me-lg-5 {
-  margin-right: 3rem!important;
+  margin-right: 3rem !important;
 }
 
-#principal{
-  background-image: url("imagenes/fondo.jpg");
+#principal {
+  background-image: url("imagenes/carretera2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -29,11 +32,12 @@ h1 {
   font-size: 7.5vh;
   text-shadow: 2px 4px 8px #000;
 }
-#proyectos{
-  background-color: cyan;
+
+#proyectos {
+  background-color: rgb(12, 11, 11);
   text-align: justify;
   font-size: 20px;
-  
+
 }
 
 #Learning {
@@ -44,6 +48,3 @@ h1 {
   background-attachment: fixed;
   color: white;
 }
-
-
-
