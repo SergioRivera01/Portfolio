@@ -1,239 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <script script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <title>Portfolio personal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Sergio Rivera Anguita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-
 <body>
 
-    <!-- Menú -->
-    <header class="row" id="navigation">
-        <div class="col-12">
-            <nav class="navbar navbar-dark  bg-dark navbar-expand-lg  bg-lg-transparent fixed-top" id="miBarra">
-                <div class="collapse navbar-collapse" id="target">
-                    <span class="text-light p-1 brand__text">Sergio Rivera</span>
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item-active me-lg-5"><a href="#Home" class="nav-link text-light">HOME</a>
-                        </li>
-                        <li class="nav-item  me-lg-5"><a href="#About" class="nav-link text-light">¿QUIÉN SOY?</a></li>
-                        <li class="nav-item  me-lg-5"><a href="#Projects" class="nav-link text-light ">PROYECTOS</a>
-                        </li>
-                        <!--<li class="nav-item  me-lg-5"><a href="contacto.html" class="nav-link text-light"
-                                target="blank">CONTACTO</a></li>-->
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+<nav>
+    <ul>
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+</nav>
 
+<section class="hero" aria-label="Introducción principal">
+    <video autoplay muted loop playsinline>
+        <source src="assets/images/video.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+    </video>
 
-    <!--Primera impresión-->
-
-    <section>
-        <div id="Home" class="col-12 d-flex justify-content-center align-items-center image__background" style=" height:
-        100vh;" id="IntroducingMySelf">
-            <div class="row-col-6 d-flex justify-content-start intro__style">
-                <div class=" col-12 flex-column">
-                    <h1 id="Greeting" class="text-light pt-5 typing">¡Hola!<br>¡Soy Sergio!</h1>
-                    <p class="text-light pt-4 pb-4">¡Encantado de conocerte!</p>
-                    <!-- <a class="btn btn-light" href="contacto.html" target="blank" id="btnContacto"><span
-                            class="button__font">¡Hablemos!</span></a>-->
-                </div>
-            </div>
-    </section>
-
-
-
-    <!--Sobre mi-->
-    <div class="row d-flex align-items-center " id="About">
-        <div class="col-12 p-5 bg-dark">
-            <div class="row p-lg-5 d-flex justify-content-center">
-                <div class="col-12 col-lg-6 p-lg-4 justify-content-center">
-                    <h2 class="pt-2 pb-5 text-light title_txt">¿Quién soy?</h2>
-                    <span class="text-light">
-                        Mi nombre es Segio, soy estudiante de Desarrollo de Aplicaciones Multiplataforma. Actualmente
-                        estoy cursando mi
-                        segundo año en U-tad. He empezado a estudiar esto porque en el futuro quiero dedicarme
-                        a la programación de videojuegos o al desarrollo de aplicaciones. Todos los días aprendo algo
-                        nuevo
-                        y estoy más convencido de que quiero dedicarme a esto.
-                        <br> <br>
-                        En mi tiempo libre suelo jugar a videojuegos, estar con amigos, aprender cosas nuevas ...
-                        A veces programo por mi cuenta para no perder la práctica y seguir aprendiendo.
-
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!--Learning-->
-        <div class="col-12 p-5" id="Learning">
-            <div class="row p-lg-5 d-flex justify-content-center ">
-                <div class="col-12 col-lg-6 p-2 p-lg-5 justify-content-cente align-content-center rounded-3"
-                    id="LearningCard">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="pb-2 m-1  title_txt">
-                                Lo que estoy aprendiendo.
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row pt-2 ps-2 pe-2">
-                        <div class="col-12 p-lg-3 d-flex flex-column">
-                            <h3 class="pb-4 m-1 h4">Lenguajes de Programación</h3>
-                            <span class="mt-1 mb-2 ms-2">Como dije todavía estoy aprendiendo. Y lo que he aprendido
-                                hasta ahora es:</span>
-                            <div class="row">
-                                <div class="col-12 pt-1 pb-0 d-flex flex-column">
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">HTML</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" id="HTMLBar">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">CSS</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" id="CSSBar">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4 prog__lang">Java</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                            aria-valuemin="0" aria-valuemax="100" id="JavaBar" style="width: 50%;">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">Java Script</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 20%;"
-                                            aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" id="JSBar">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">MYSQL</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="MYSQLBar">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">Swift</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="MYSQLBar">
-                                        </div>
-                                    </div>
-                                    <span class="pt-2 pb-2 ms-2 ms-lg-4  prog__lang">Kotlin</span>
-                                    <div class="progress ms-2 ms-lg-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 15%;"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" id="MYSQLBar">
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    <span class="mt-2">Además, pero no menos importante:</span>
-                                    <ul class="mt-2">
-                                        <li><span>He aprendido a usar <b>Git.</b> </span></li>
-                                        <!-- <li><span>
-                                                También estoy familiarizado con la metodología de trabajo
-                                                Scrum.</span>
-                                        </li>-->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--What's coming next-->
-        <div class="col-12 p-5 bg-dark">
-            <div class="row p-lg-5 d-flex justify-content-center ">
-                <div class="col-12 col-lg-6 p-2 p-lg-5 justify-content-center align-content-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="pb-2 m-1 text-light title_txt">
-                                ¡Más Información!
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row p-2">
-                        <div class="col-12 p-lg-3 d-flex flex-column">
-                            <h3 class="mt-1 mb-4 text-light">Cursos</h3>
-                            <span class="text-light  mb-2">
-                                Realicé un curso de robotica impartido por Robotics en la Universidad Complutense de
-                                Madrid en la facultad de informática en Junio de 2016
-                            </span>
-                            <ul class="general__list">
-
-                            </ul>
-                            <h3 class="text-light mt-2">Lo que planeo aprender en un futuro</h3>
-                            <br>
-                            <span class="text-light ms-2">Me gustaria seguir aprendiendo la programación horientada a
-                                los videojuegos y también programación con realidad virtual, aumentada y mixta. </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Projects -->
-        <div class="col image__background" id="Projects">
-            <div class="row ">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="text-light align-self-center p-5 project__title">Proyectos</h1>
-                    <div class="row">
-                        <div
-                            class="col-12 p-lg-5 d-flex flex-lg-row flex-column justify-content-evenly align-content-center">
-                            <div class="card rounded-3 m-2" style="width: 20rem;">
-                                <img class="card-img-top image__card" src="imagenes/spirulineGame.png"
-                                    alt="Card image cap">
-                                <div class="card-body  d-flex flex-column card__content">
-                                    <h5 class="card-title">Spiruline Game</h5>
-                                    <p class="card-text">Juego creado con RPG Maker MV. Es un pequeño juego educativo
-                                        100% en inglés.
-                                    </p>
-                                    <a href="https://github.com/SergioRivera01/SpirulineGame"
-                                        class="botonLink btn btn-dark" target="">Link GitHub </a>
-                                </div>
-                            </div>
-                            <div class="card rounded-3 m-2" style="width: 20rem;">
-                                <img class="card-img-top image__card" src="imagenes/monkey.png" alt="Card image cap">
-                                <div class="card-body  d-flex flex-column card__content">
-                                    <h5 class="card-title">Mon-Key Shop</h5>
-                                    <p class="card-text">Tienda creada en PHP junto a tres compañeros de clase. Contiene
-                                        Login y Registro funcional, carro de compra y visualización de productos</p>
-
-                                    <!--<a href="" class="botonLink btn btn-dark"
-                                        target="https://sergiorivera01.github.io/TiendaMonkey/index.php">Link Tienda
-                                    </a>-->
-                                </div>
-                            </div>
-                            <!--<div class="card rounded-3 m-2" style="width: 20rem;">
-                                <img class="card-img-top image__card" src="img/Calculator-pana.png"
-                                    alt="Card image cap">
-                                <div class="card-body d-flex flex-column card__content">
-                                    <h5 class="card-title">Calculator</h5>
-                                    <p class="card-text">Those maths aren't easy, let me give
-                                        you a hand with that.<br> Simple but effective.<br>
-                                        HTML + CSS + JS</p>
-                                    <a href="#" class="btn btn-dark" target="">Still on progress</a>
-                                </div>
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="hero-content">
+        <h1>Sergio Rivera Anguita</h1>
+        <h3>Diseñador de videojuegos y programador</h3>
+        <div class="social-icons" role="list">
+            <a href="mailto:sergiorivera01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/SergioRivera01" target="_blank" aria-label="GitHub" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sergio-rivera-anguita/" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
+</section>
 
+<section id="about" tabindex="0" aria-label="Sobre mí">
+    <h3>Sobre mí</h3>
+    <p>
+        Soy Sergio, un estudiante de diseño de videojuegos apasionado por la programación. Me encanta combinar creatividad y lógica para desarrollar mecánicas de juego que sorprendan y diviertan a los jugadores. Durante mi formación he desarrollado varios proyectos, mayormente juegos en 3D aunque también he realizado alguno 2D. En podido poner en práctica mis habilidades desarrollando sistemas de movimiento, interacciones, puzles, enemigos, y mucho más.<br><br>
+        Mi objetivo es crecer profesionalmente en la industria del videojuego. Estoy siempre abierto a aprender nuevas tecnologías y colaborar en proyectos innovadores que desafíen mis capacidades.
+    </p>
+</section>
 
+<section id="projects" tabindex="0" aria-label="Proyectos realizados">
+    <h3>Proyectos realizados</h3>
+
+    <div class="project-card" tabindex="0">
+        <h1>GhostSnap</h1>
+        <div class="project-carousel" aria-label="Galería de imágenes GhostSnap">
+            <img src="assets/images/GhostSnap1.jpg" alt="GhostSnap Imagen 1" class="active" />
+            <img src="assets/images/GhostSnap2.jpg" alt="GhostSnap Imagen 2" />
+            <img src="assets/images/GhostSnap3.jpg" alt="GhostSnap Imagen 3" />
+            <img src="assets/images/GhostSnap4.jpg" alt="GhostSnap Imagen 4" />
+            <button class="prev" aria-label="Imagen anterior">&#10094;</button>
+            <button class="next" aria-label="Imagen siguiente">&#10095;</button>
+        </div>
+        <p>
+            Juego 3D en primera persona hecho con Unity. Deberás investigar un castillo con una leyenda espeluznante. Junto con tu cámara de fotos deberás encontrar y fotografiar a los fantasmas para obtener respuestas de lo sucedido en el interior del castillo.<br>
+            Programé las mecánicas del juego, interacciones, puzles, acertijos y pruebas. También participé en el diseño de niveles y obstáculos.<br>
+        </p>
+        <a href="#" target="_blank" rel="noopener">Ver en GitHub</a>
+    </div>
+
+    <div class="project-card" tabindex="0">
+        <h1>Sneaky Traveler</h1>
+        <div class="project-carousel" aria-label="Galería de imágenes Sneaky Traveler">
+            <img src="assets/images/SneakyTraveller1.png" alt="Sneaky Traveler Imagen 1" class="active" />
+            <img src="assets/images/SneakyTraveller2.png" alt="Sneaky Traveler Imagen 2" />
+            <img src="assets/images/SneakyTraveller3.png" alt="Sneaky Traveler Imagen 3" />
+            <img src="assets/images/SneakyTraveller4.png" alt="Sneaky Traveler Imagen 4" />
+            <button class="prev" aria-label="Imagen anterior">&#10094;</button>
+            <button class="next" aria-label="Imagen siguiente">&#10095;</button>
+        </div>
+        <p>
+            Juego 3D con vista en 3ª persona y con movimiento point and clic hecho con Unity.<br>
+            Has sido enviado a una misión de búsqueda y rescate de tus aliados. Te encuentras en un planeta hostil, tus aliados han sido secuestrados y deberás encontrarlos para llevarlos de vuelta a casa, pero ten cuidado, si te pillan en el intento, serás tú quien no vuelva a casa.<br>
+            Programé las mecánicas de movimiento, interacciones con aliados, mecánicas de puzles y obstáculos, junto con el comportamiento de los enemigos. Ayudé también en el diseño de niveles.<br>
+        </p>
+        <a href="#" target="_blank" rel="noopener">Ver en GitHub</a>
+    </div>
+</section>
+
+<section id="contact" tabindex="0" aria-label="Contacto" >
+    <!--<h3>Contacto</h3>-->
+    <div class="social-icons-final" role="list">
+        <a href="mailto:sergiorivera01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/SergioRivera01" target="_blank" aria-label="GitHub" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sergio-rivera-anguita/" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Sergio Rivera Anguita.</p>
+</footer>
+
+<script src="functions.js" defer></script>
 </body>
-
 </html>
