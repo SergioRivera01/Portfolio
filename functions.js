@@ -1,4 +1,7 @@
-﻿document.querySelectorAll('.project-carousel').forEach(carousel => {
+﻿// portfolio.js
+
+// Carrusel de proyectos
+document.querySelectorAll('.project-carousel').forEach(carousel => {
     const images = carousel.querySelectorAll('img');
     const prevBtn = carousel.querySelector('.prev');
     const nextBtn = carousel.querySelector('.next');

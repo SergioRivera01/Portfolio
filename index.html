@@ -1,101 +1,34 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio Sergio Rivera Anguita</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>Menu Principal</title>
+    <link href="style-menu.css" rel="stylesheet" />
 </head>
 <body>
-
-<nav>
-    <ul>
-        <li><a href="#about" class="nav-link">Sobre mí</a></li>
-        <li><a href="#projects" class="nav-link">Proyectos</a></li>
-        <li><a href="#contact" class="nav-link">Contacto</a></li>
-    </ul>
-</nav>
-
-<section class="hero" aria-label="Introducción principal">
-    <video autoplay muted loop playsinline>
+<section class="menu-screen">
+    <video autoplay muted loop playsinline class="background-video">
         <source src="assets/images/video.mp4" type="video/mp4" />
         Tu navegador no soporta video.
     </video>
+   
 
-    <div class="hero-content">
-        <h1>Sergio Rivera Anguita</h1>
-        <h3>Diseñador de videojuegos y programador</h3>
-        <div class="social-icons" role="list">
-            <a href="mailto:sergiorivera01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/SergioRivera01" target="_blank" aria-label="GitHub" rel="noopener"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/sergio-rivera-anguita/" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
-        </div>
+    <audio id="menu-audio" src="assets/audio/musica-fondo.mp3"  autoplay loop></audio>
+    
+    <div class="menu-content">
+        <h1 class="game-title">Sergio Rivera Anguita</h1>
+        <h2 class="subtitle">Diseñador de Videojuegos</h2>
+        <nav class="menu-buttons">
+            <button id="startBtn" class="menu-btn">▶ Empezar</button>
+            <button id="play-audio-btn" class="menu-btn">🔈 Sonido</button>
+            <!--<a href="portfolio.html" class="menu-btn">Portfolio</a>-->
+            <a href="#cv" class="menu-btn">CV</a>
+        </nav>
     </div>
 </section>
 
-<section id="about" tabindex="0" aria-label="Sobre mí">
-    <h3>Sobre mí</h3>
-    <p>
-        Soy Sergio, un estudiante de diseño de videojuegos apasionado por la programación. Me encanta combinar creatividad y lógica para desarrollar mecánicas de juego que sorprendan y diviertan a los jugadores. Durante mi formación he desarrollado varios proyectos, mayormente juegos en 3D aunque también he realizado alguno 2D. He podido poner en práctica mis habilidades desarrollando sistemas de movimiento, interacciones, puzles, enemigos, y mucho más.<br><br>
-        Mi objetivo es crecer profesionalmente en la industria del videojuego. Estoy siempre abierto a aprender nuevas tecnologías y colaborar en proyectos innovadores que desafíen mis capacidades.
-    </p>
-</section>
-
-<section id="projects" tabindex="0" aria-label="Proyectos realizados">
-    <h3>Proyectos realizados</h3>
-
-    <div class="project-card" tabindex="0">
-        <h1>GhostSnap</h1>
-        <div class="project-carousel" aria-label="Galería de imágenes GhostSnap">
-            <img src="assets/images/GhostSnap1.jpg" alt="GhostSnap Imagen 1" class="active" />
-            <img src="assets/images/GhostSnap2.jpg" alt="GhostSnap Imagen 2" />
-            <img src="assets/images/GhostSnap3.jpg" alt="GhostSnap Imagen 3" />
-            <img src="assets/images/GhostSnap4.jpg" alt="GhostSnap Imagen 4" />
-            <button class="prev" aria-label="Imagen anterior">&#10094;</button>
-            <button class="next" aria-label="Imagen siguiente">&#10095;</button>
-        </div>
-        <p>
-            Juego 3D en primera persona hecho con Unity. Deberás investigar un castillo con una leyenda espeluznante. Junto con tu cámara de fotos deberás encontrar y fotografiar a los fantasmas para obtener respuestas de lo sucedido en el interior del castillo.<br>
-            Programé las mecánicas del juego, interacciones, puzles, acertijos y pruebas. También participé en el diseño de niveles y obstáculos.<br>
-        </p>
-        <a href="#" target="_blank" rel="noopener">Ver en GitHub</a>
-    </div>
-
-    <div class="project-card" tabindex="0">
-        <h1>Sneaky Traveler</h1>
-        <div class="project-carousel" aria-label="Galería de imágenes Sneaky Traveler">
-            <img src="assets/images/SneakyTraveller1.png" alt="Sneaky Traveler Imagen 1" class="active" />
-            <img src="assets/images/SneakyTraveller2.png" alt="Sneaky Traveler Imagen 2" />
-            <img src="assets/images/SneakyTraveller3.png" alt="Sneaky Traveler Imagen 3" />
-            <img src="assets/images/SneakyTraveller4.png" alt="Sneaky Traveler Imagen 4" />
-            <button class="prev" aria-label="Imagen anterior">&#10094;</button>
-            <button class="next" aria-label="Imagen siguiente">&#10095;</button>
-        </div>
-        <p>
-            Juego 3D con vista en 3ª persona y con movimiento point and clic hecho con Unity.<br>
-            Has sido enviado a una misión de búsqueda y rescate de tus aliados. Te encuentras en un planeta hostil, tus aliados han sido secuestrados y deberás encontrarlos para llevarlos de vuelta a casa, pero ten cuidado, si te pillan en el intento, serás tú quien no vuelva a casa.<br>
-            Programé las mecánicas de movimiento, interacciones con aliados, mecánicas de puzles y obstáculos, junto con el comportamiento de los enemigos. Ayudé también en el diseño de niveles.<br>
-        </p>
-        <a href="#" target="_blank" rel="noopener">Ver en GitHub</a>
-    </div>
-</section>
-
-<section id="contact" tabindex="0" aria-label="Contacto" >
-    <!--<h3>Contacto</h3>-->
-    <div class="social-icons-final" role="list">
-        <a href="mailto:sergiorivera01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/SergioRivera01" target="_blank" aria-label="GitHub" rel="noopener"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sergio-rivera-anguita/" target="_blank" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
-
-    </div>
-</section>
-
-<footer>
-    <p>© 2025 Sergio Rivera Anguita.</p>
-</footer>
-
-<script src="functions.js" defer></script>
+<script src="menu-functions.js" defer></script>
 </body>
 </html>

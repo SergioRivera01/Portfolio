@@ -1,227 +1,178 @@
-/* Reset y estilos base */
+/* portfolio.css */
+
+/* Reset básico */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #121212;
     color: #eee;
-    line-height: 1.6;
+    line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
-/* Navegación */
 nav {
-    background-color: #1e1e1e;
-    padding: 10px 20px;
+    background-color: #1f1f1f;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
+
 nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
-    gap: 40px;
+    gap: 2rem;
 }
+
 nav ul li a {
     color: #eee;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-}
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #f1c40f;
-    color: #121212;
+    padding: 0.3rem 0.6rem;
+    transition: color 0.3s ease;
 }
 
-/* Hero */
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #f0db4f;
+    outline: none;
 }
-.hero video {
+
+section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f0db4f;
+}
+
+.project-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px #000;
+    outline: none;
+}
+
+.project-card:focus {
+    box-shadow: 0 0 15px #f0db4f;
+}
+
+.project-carousel {
+    position: relative;
+    margin-bottom: 1rem;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.project-carousel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.project-carousel img.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+}
+
+.project-carousel button.prev,
+.project-carousel button.next {
     position: absolute;
     top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 1;
-}
-.hero-content {
-    position: relative;
-    z-index: 10;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-.hero-content h1 {
-    font-size: 4rem;
-    color: #f1c40f;
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.7);
-    margin-bottom: 20px;
-}
-.social-icons {
-    display: flex;
-    gap: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    border: none;
+    color: #f0db4f;
     font-size: 2rem;
-    
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
 }
-.social-icons a {
-    color: #eee;
-    transition: color 0.3s;
+
+.project-carousel button.prev {
+    left: 10px;
 }
-.social-icons a:hover {
-    color: #f1c40f;
+
+.project-carousel button.next {
+    right: 10px;
+}
+
+.project-carousel button.prev:hover,
+.project-carousel button.next:hover,
+.project-carousel button.prev:focus,
+.project-carousel button.next:focus {
+    background-color: #f0db4f;
+    color: #121212;
+    outline: none;
+}
+
+.project-card a {
+    color: #f0db4f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-card a:hover,
+.project-card a:focus {
+    text-decoration: underline;
+    outline: none;
 }
 
 .social-icons-final {
     display: flex;
-    gap: 30px;
-    font-size: 2rem;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    padding-left: 0; /* Quita el padding por defecto si hay */
-    margin: 0 auto;
-
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
 }
+
 .social-icons-final a {
-    color: #eee;
-    transition: color 0.3s;
-    
-}
-.social-icons-final a:hover {
-    
-    color: #f1c40f;
-}
-
-/* Secciones */
-section {
-    max-width: 1000px;
-    margin: 80px auto 40px auto;
-    padding: 0 20px;
-}
-h3 {
+    color: #f0db4f;
     font-size: 2rem;
-    color: #f1c40f;
-    margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
-/* Proyectos */
-.project-card {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
-}
-.project-card h1 {
-    margin-bottom: 15px;
-    color: #f7dc6f;
-}
-.project-card p {
-    margin: 15px 0;
-    font-size: 1rem;
-    color: #ccc;
-}
-.project-card a {
-    font-weight: 600;
-    color: #f1c40f;
-    font-size: 1rem;
+.social-icons-final a:hover,
+.social-icons-final a:focus {
+    color: #fff;
+    outline: none;
 }
 
-/* Carrusel de imágenes */
-.project-carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-.project-carousel img {
-    width: 100%;
-    display: none;
-    border-radius: 8px;
-    user-select: none;
-}
-.project-carousel img.active {
-    display: block;
-}
-.project-carousel button {
-    position: absolute;
-    top: 50%;
-    background: rgba(0,0,0,0.5);
-    border: none;
-    color: #f1c40f;
-    font-size: 2rem;
-    cursor: pointer;
-    transform: translateY(-50%);
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-.project-carousel button:hover {
-    background: rgba(241, 196, 15, 0.8);
-}
-.project-carousel .prev {
-    left: 10px;
-}
-.project-carousel .next {
-    right: 10px;
-}
-
-/* Contacto */
-#contact ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    padding-left: 0; /* Quita el padding por defecto si hay */
-    margin: 0 auto;
-}
-#contact ul li a {
-    font-weight: 600;
-    font-size: 2.1rem;
-    color: #f1c40f;
-    transition: color 0.3s;
-}
-#contact ul li a:hover {
-    color: #f7dc6f;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    color: #666;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #888;
     border-top: 1px solid #333;
-    margin-top: 60px;
+    margin-top: 3rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    nav ul {
-        gap: 15px;
-    }
-    #contact ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+a:focus,
+button:focus {
+    outline: 2px solid #f0db4f;
+    outline-offset: 2px;
 }
