@@ -1,30 +1,27 @@
 ﻿// functions.js
 
-// 1. Seleccionamos todos los elementos que queremos animar al hacer scroll
-const hiddenElements = document.querySelectorAll('.project-card, .section-title, .about-section p');
+/* =========================================
+   1. EFECTO MÁQUINA DE ESCRIBIR (Multi-línea)
+   ========================================= */
+const textToType = "Sergio Rivera Anguita"; // Tu nombre completo
+const typewriterElement = document.getElementById('typewriter');
+let index = 0;
 
-// 2. Creamos el observador (Intersection Observer)
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        // Si el elemento entra en la pantalla del usuario
-        if (entry.isIntersecting) {
-            // Le añadimos la clase 'show' que activa la animación en CSS
-            entry.target.classList.add('show');
-
-            // Dejamos de observar el elemento para que la animación se ejecute solo la primera vez
-            observer.unobserve(entry.target);
+if (typewriterElement) {
+    function type() {
+        if (index < textToType.length) {
+            typewriterElement.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, 100); // Velocidad de escritura (100ms por letra)
         }
-    });
-}, {
-    threshold: 0.15 // El elemento aparecerá cuando al menos el 15% sea visible en pantalla
-});
+    }
+    // Retrasamos el inicio medio segundo al entrar a la web para que quede más natural
+    setTimeout(type, 500);
+}
 
-// 3. Le decimos al observador que vigile cada uno de los elementos seleccionados
-hiddenElements.forEach((el) => observer.observe(el));
-
-// =========================================
-// LÓGICA DEL CARRUSEL (Solo para páginas de detalle)
-// =========================================
+/* =========================================
+   2. CARRUSEL DE IMÁGENES (Para páginas de detalle)
+   ========================================= */
 const carousel = document.querySelector('.project-carousel');
 
 if (carousel) {
@@ -49,3 +46,26 @@ if (carousel) {
         showImage(current);
     });
 }
+
+/* =========================================
+   3. ANIMACIONES DE SCROLL (Fade-in de las tarjetas)
+   ========================================= */
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15 // El elemento aparecerá cuando el 15% sea visible en pantalla
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            // Dejamos de observarlo para que la animación solo ocurra la primera vez
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Seleccionamos las tarjetas y títulos que queremos que aparezcan con fade-in
+const hiddenElements = document.querySelectorAll('.project-card, .section-title, .about-section p');
+hiddenElements.forEach((el) => observer.observe(el));
