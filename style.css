@@ -108,7 +108,7 @@ nav ul {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 
@@ -414,8 +414,13 @@ nav ul {
    MEDIA QUERIES (Móviles)
    ========================================= */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .highlight { font-size: 1.5rem; }
+    .hero h1 {
+        font-size: 1rem; 
+        gap: 8px; 
+    }
+    .highlight {
+        font-size: 1.5rem;
+    }
 
     .hero h2 {
         font-size: 1.2rem;
@@ -429,6 +434,30 @@ nav ul {
         font-size: 0.5rem;
     }
     
+    .detail-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-carousel {
+        height: 250px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        color: #ccc;
+    }
+    
+    
+    
+}
+
+@media (max-width: 480px) {
+    .highlight {
+        font-size: 0.9rem;
+    }
 }
 
 /* =========================================
@@ -563,12 +592,5 @@ nav ul {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-    .detail-content {
-        grid-template-columns: 1fr;
-    }
-    .project-carousel {
-        height: 250px;
-    }
-}
+
 
