@@ -176,3 +176,34 @@ button:focus {
     outline: 2px solid #f0db4f;
     outline-offset: 2px;
 }
+
+.boton-descarga {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.boton-descarga:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-descarga:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.boton-descarga:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
