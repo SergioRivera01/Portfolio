@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sneaky Traveler | Sergio Rivera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navegación para volver al portfolio principal -->
+<nav>
+    <ul>
+        <li><a href="../index.html" class="nav-link"><i class="fas fa-chevron-left"></i> Volver al Portfolio</a></li>
+    </ul>
+</nav>
+
+<main class="project-detail">
+    <header class="detail-header">
+        <h1 class="highlight">Sneaky Traveler</h1>
+        <div class="tech-stack justify-center">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Enemy AI</span>
+            <span class="tech-tag">Pathfinding</span>
+        </div>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <div class="project-carousel" aria-label="Galería de imágenes Sneaky Traveler">
+        <img src="../assets/images/SneakyTraveller1.png" alt="Sneaky Traveler Gameplay 1" class="active" />
+        <img src="../assets/images/SneakyTraveller2.png" alt="Sneaky Traveler Escenario 2" />
+        <img src="../assets/images/SneakyTraveller3.png" alt="Sneaky Traveler Interacción 3" />
+        <img src="../assets/images/SneakyTraveller4.png" alt="Sneaky Traveler Enemigos 4" />
+        <button class="prev" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="next" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Contenido dividido a dos columnas -->
+    <div class="detail-content">
+        <section class="game-info">
+            <h3><i class="fas fa-gamepad"></i> Sobre el juego</h3>
+            <p>Sneaky Traveler es una aventura 3D de sigilo con vista en 3ª persona y movimiento <em>point & click</em>. El jugador es enviado a un planeta hostil en una misión de búsqueda y rescate. El objetivo es encontrar a los aliados secuestrados y llevarlos de vuelta a casa, evitando ser detectado por los enemigos que patrullan la zona.</p>
+
+            <div class="action-buttons">
+                <a href="../assets/files/SneakyTraveler_Build.zip" download="SneakyTraveler_Build.zip" class="btn btn-primary"><i class="fas fa-download"></i> Descargar Build</a>
+                <a href="URL_DE_TU_GITHUB" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Ver Código</a>
+            </div>
+        </section>
+
+        <section class="my-role">
+            <h3><i class="fas fa-code"></i> Mi Contribución</h3>
+            <ul class="role-list">
+                <li><strong>Movement & Pathfinding:</strong> Programación del sistema de movimiento <em>Point & Click</em> utilizando NavMesh para asegurar una navegación fluida en el entorno 3D.</li>
+                <li><strong>Enemy AI (Sigilo):</strong> Desarrollo del comportamiento de los enemigos, configurando conos de visión y estados de alerta (patrulla, persecución).</li>
+                <li><strong>Sistemas e Interacciones:</strong> Implementación de la lógica de puzles, obstáculos ambientales y el sistema de interacción y rescate de aliados.</li>
+                <li><strong>Level Design:</strong> Apoyo en el diseño de niveles, distribuyendo coberturas y rutas de patrulla para balancear la dificultad del sigilo.</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Sergio Rivera Anguita.</p>
+</footer>
+
+<!-- Usamos el mismo archivo JS que ya tiene la lógica del carrusel -->
+<script src="../functions.js" defer></script>
+</body>
+</html>

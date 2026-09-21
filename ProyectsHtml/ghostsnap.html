@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GhostSnap | Sergio Rivera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navegación simple para volver atrás -->
+<nav>
+    <ul>
+        <li><a href="../index.html" class="nav-link"><i class="fas fa-chevron-left"></i> Volver al Portfolio</a></li>
+    </ul>
+</nav>
+
+<main class="project-detail">
+    <header class="detail-header">
+        <h1 class="highlight">GhostSnap</h1>
+        <div class="tech-stack justify-center">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Puzles</span>
+            <span class="tech-tag">Level Design</span>
+        </div>
+    </header>
+
+    <!-- Carrusel rescatado y optimizado -->
+    <div class="project-carousel" aria-label="Galería de imágenes GhostSnap">
+        <img src="../assets/images/GhostSnap1.jpg" alt="GhostSnap Gameplay 1" class="active" />
+        <img src="../assets/images/GhostSnap2.jpg" alt="GhostSnap Puzle 2" />
+        <img src="../assets/images/GhostSnap3.jpg" alt="GhostSnap Entorno 3" />
+        <button class="prev" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="next" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Contenido dividido a dos columnas -->
+    <div class="detail-content">
+        <section class="game-info">
+            <h3><i class="fas fa-gamepad"></i> Sobre el juego</h3>
+            <p>GhostSnap es un juego 3D en primera persona de investigación. El jugador se adentra en un castillo con una leyenda espeluznante, armado únicamente con una cámara de fotos. El objetivo es encontrar y fotografiar fantasmas ocultos y resolver puzles ambientales para desentrañar el misterio del castillo.</p>
+
+            <div class="action-buttons">
+                <a href="../assets/files/GhostSnap_Build.zip" download="GhostSnap_Build.zip" class="btn btn-primary"><i class="fas fa-download"></i> Descargar Build</a>
+                <a href="URL_DE_TU_GITHUB" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Ver Código</a>
+            </div>
+        </section>
+
+        <section class="my-role">
+            <h3><i class="fas fa-code"></i> Mi Contribución</h3>
+            <ul class="role-list">
+                <li><strong>Mecánicas Core:</strong> Programación en C# del sistema de cámara y detección de entidades (fantasmas) en el campo de visión.</li>
+                <li><strong>Interacciones:</strong> Desarrollo del sistema de interacción con objetos del entorno y resolución de acertijos.</li>
+                <li><strong>Level Design:</strong> Participación activa en el diseño del recorrido del jugador y colocación estratégica de obstáculos para fomentar la exploración.</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Sergio Rivera Anguita.</p>
+</footer>
+
+<script src="../functions.js" defer></script>
+</body>
+</html>

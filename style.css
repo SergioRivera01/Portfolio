@@ -1,82 +1,488 @@
-/* portfolio.css */
+/* =========================================
+   VARIABLES Y RESET
+   ========================================= */
+:root {
+    --bg-color: #121212;
+    --card-bg: #222222;
+    --text-main: #eeeeee;
+    --text-muted: #94a3b8;
+    --accent-color: #f0db4f; /* Tu amarillo original */
+    --accent-hover: #d4c13a;
+    --btn-blue: #2563eb; /* Tu azul original para descargas */
+    --btn-blue-hover: #1d4ed8;
 
-/* Reset básico */
+    --font-titles: 'Press Start 2P', cursive;
+    --font-text: 'Inter', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Esto evita que el menú tape los títulos al navegar */
+}
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #121212;
-    color: #eee;
-    line-height: 1.5;
-    min-height: 100vh;
+    font-family: var(--font-text);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
     scroll-behavior: smooth;
 }
 
+/* =========================================
+   ACCESIBILIDAD GENERAL
+   ========================================= */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   NAVEGACIÓN (Sticky y Minimalista)
+   ========================================= */
 nav {
-    background-color: #1f1f1f;
+    background-color: rgba(18, 18, 18, 0.95);
     padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #333;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
-nav ul li a {
-    color: #eee;
+.nav-link {
+    color: var(--text-main);
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.3rem 0.6rem;
+    font-family: var(--font-titles);
+    font-size: 0.6rem;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-    color: #f0db4f;
-    outline: none;
+.nav-link:hover {
+    color: var(--accent-color);
 }
 
-section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 1rem;
+/* =========================================
+   HERO SECTION (Presentación)
+   ========================================= */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 
-h3 {
+.hero-content {
+    max-width: 800px;
+}
+
+.player-tag {
+    color: var(--accent-color);
+    font-family: var(--font-titles);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* La magia del parpadeo: dura 1.2 segundos y se repite infinitamente */
+    animation: neon-pulse 3s ease-in-out infinite;
+}
+
+/* Definimos la animación para que el salto sea brusco (como un arcade real) y no un difuminado suave */
+@keyframes neon-pulse {
+    0%, 100% { opacity: 1; text-shadow: 0 0 8px rgba(240, 219, 79, 0.6); }
+    50% { opacity: 0.4; text-shadow: none; } /* No desaparece del todo */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
     font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #f0db4f;
+    margin-bottom: 0.5rem;
+
+    /* La magia para alinear fuentes distintas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline; /* Esto fuerza a que la base de las letras coincida */
+    gap: 15px; /* Añade un espacio perfecto entre "Hola, soy" y tu nombre */
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-family: var(--font-titles);
+    font-size: 2.2rem;
+
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid var(--accent-color);
+    width: 21ch;
+
+    animation:
+            typing-name 1.5s steps(21) 0.5s both,
+            blink-cursor 0.8s step-end infinite;
+}
+
+/* Los Keyframes para que funcione */
+@keyframes typing-name {
+    from { width: 0; }
+    to { width: 21ch; }
+}
+
+@keyframes blink-cursor {
+    0%, 100% { border-color: var(--accent-color); }
+    50% { border-color: transparent; }
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+}
+
+/* BOTONES GLOBALES */
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: var(--font-titles);
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* =========================================
+   SECCIÓN DE PROYECTOS (Grid)
+   ========================================= */
+.projects-section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
 .project-card {
-    background-color: #222;
+    /* Mantenemos lo que ya tenías: background, border, transition, etc... */
+    position: relative;
+    background-color: var(--card-bg);
     border-radius: 8px;
-    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+    /* AÑADE ESTO: */
+    display: block; /* Obliga al enlace a comportarse como un bloque contenedor */
+    text-decoration: none; /* Evita que el texto de la tarjeta se subraye */
+    color: var(--text-main); /* Mantiene el color del texto intacto */
+    /*cursor: pointer; /* Fuerza el cursor de interacción */
+}
+
+.enlace-detalles::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Nivel 1 de profundidad */
+}
+
+/* 3. Elevamos el botón de descarga para que no sea tapado por la capa invisible */
+.enlace-descarga {
+    position: relative;
+    z-index: 2; /* Nivel 2: Se queda por encima y es clickeable */
+}
+
+/* (Opcional) Ajustamos el botón para que ocupen la mitad cada uno */
+.card-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-link {
+    flex: 1; /* Para que ocupen el mismo ancho */
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+/* 1. Base compartida para ambos botones (SIN color de fondo) */
+.btn-link {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* 2. Botón "Ver Detalles" (Fuerza el amarillo) */
+.btn-detalles {
+    background-color: var(--accent-color) !important;
+    color: var(--bg-color) !important;
+    border: 2px solid var(--accent-color) !important;
+}
+
+.btn-detalles:hover {
+    background-color: transparent !important;
+    color: var(--accent-color) !important;
+    box-shadow: 0 0 10px rgba(240, 219, 79, 0.3);
+}
+
+/* 3. Botón "Descargar" (Fuerza el azul transparente) */
+.btn-descarga {
+    background-color: transparent !important;
+    color: var(--btn-blue) !important;
+    border: 2px solid var(--btn-blue) !important;
+}
+
+.btn-descarga:hover {
+    background-color: var(--btn-blue) !important;
+    color: #ffffff !important;
+}
+
+.btn-link:active {
+    transform: translateY(2px);
+}
+/* Efecto al hacer clic en cualquiera de los dos */
+.btn-link:active {
+    transform: translateY(2px);
+}
+.titulo-enlace {
+    color: inherit; /* Hereda el color que ya le dimos al h3 */
+    text-decoration: none; /* Le quita el subrayado */
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px rgba(240, 219, 79, 0.15);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #333;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+}
+
+.tech-stack {
+    margin: 1.2rem 0;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: rgba(240, 219, 79, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(240, 219, 79, 0.3);
+}
+
+/* Adaptación de tu botón de descarga original */
+.card-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+
+    /* LA SOLUCIÓN: Esto eleva los botones por encima de la capa invisible */
+    position: relative;
+    z-index: 2;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--btn-blue);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-link:hover {
+    background-color: var(--btn-blue-hover);
+}
+
+.btn-link:active {
+    transform: translateY(1px);
+}
+
+/* =========================================
+   CONTACTO Y REDES SOCIALES
+   ========================================= */
+.social-icons-final a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons-final a:hover {
+    transform: translateY(-3px);
+    color: #fff !important;
+}
+
+/* =========================================
+   MEDIA QUERIES (Móviles)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .highlight { font-size: 1.5rem; }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.5rem;
+    }
+    
+}
+
+/* =========================================
+   ANIMACIONES DE SCROLL (Fade-in)
+   ========================================= */
+/* Estado inicial (oculto y ligeramente desplazado hacia abajo) */
+.project-card, .section-title, .about-section p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final (visible y en su posición original) */
+.project-card.show, .section-title.show, .about-section p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================================
+   PÁGINA DE DETALLE DEL PROYECTO
+   ========================================= */
+.project-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+}
+
+.detail-header {
+    text-align: center;
     margin-bottom: 2rem;
-    box-shadow: 0 0 10px #000;
-    outline: none;
 }
 
-.project-card:focus {
-    box-shadow: 0 0 15px #f0db4f;
+.detail-header .highlight {
+    font-size: 3rem;
+    animation: none; /* Quitamos el efecto RPG para esta página */
+    border: none;
+    width: auto;
+    white-space: normal;
 }
 
+.justify-center {
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Recuperando el Carrusel */
 .project-carousel {
     position: relative;
-    margin-bottom: 1rem;
-    height: 300px;
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
     overflow: hidden;
-    border-radius: 6px;
+    border: 2px solid #333;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .project-carousel img {
@@ -85,125 +491,84 @@ h3 {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.6s ease;
-    top: 0;
-    left: 0;
-    border-radius: 6px;
-    user-select: none;
-    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .project-carousel img.active {
     opacity: 1;
-    pointer-events: auto;
-    position: relative;
+    z-index: 1;
 }
 
-.project-carousel button.prev,
-.project-carousel button.next {
+.project-carousel button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.6);
-    border: none;
-    color: #f0db4f;
-    font-size: 2rem;
-    padding: 0 10px;
+    z-index: 2;
+    background-color: rgba(18, 18, 18, 0.8);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     cursor: pointer;
-    border-radius: 4px;
-    user-select: none;
+    transition: all 0.2s ease;
 }
 
-.project-carousel button.prev {
-    left: 10px;
+.project-carousel button:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
-.project-carousel button.next {
-    right: 10px;
+.project-carousel button.prev { left: 20px; }
+.project-carousel button.next { right: 20px; }
+
+/* Dos columnas de información */
+.detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 }
 
-.project-carousel button.prev:hover,
-.project-carousel button.next:hover,
-.project-carousel button.prev:focus,
-.project-carousel button.next:focus {
-    background-color: #f0db4f;
-    color: #121212;
-    outline: none;
-}
-
-.project-card a {
-    color: #f0db4f;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.project-card a:hover,
-.project-card a:focus {
-    text-decoration: underline;
-    outline: none;
-}
-
-.social-icons-final {
+.detail-content h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
+    align-items: center;
+    gap: 10px;
 }
 
-.social-icons-final a {
-    color: #f0db4f;
-    font-size: 2rem;
-    transition: color 0.3s ease;
+.role-list {
+    list-style: none;
 }
 
-.social-icons-final a:hover,
-.social-icons-final a:focus {
-    color: #fff;
-    outline: none;
+.role-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #888;
-    border-top: 1px solid #333;
-    margin-top: 3rem;
+.role-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-family: var(--font-titles);
+    font-size: 0.8rem;
 }
 
-a:focus,
-button:focus {
-    outline: 2px solid #f0db4f;
-    outline-offset: 2px;
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.boton-descarga {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+@media (max-width: 768px) {
+    .detail-content {
+        grid-template-columns: 1fr;
+    }
+    .project-carousel {
+        height: 250px;
+    }
 }
 
-.boton-descarga:hover {
-    background-color: #1d4ed8;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.boton-descarga:active {
-    transform: translateY(1px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.boton-descarga:focus-visible {
-    outline: 3px solid #93c5fd;
-    outline-offset: 2px;
-}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ColdSteel | Sergio Rivera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="../index.html" class="nav-link"><i class="fas fa-chevron-left"></i> Volver al Portfolio</a></li>
+    </ul>
+</nav>
+
+<main class="project-detail">
+    <header class="detail-header">
+        <h1 class="highlight">ColdSteel</h1>
+        <div class="tech-stack justify-center">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Lead Programmer</span>
+            <span class="tech-tag">Game Balance</span>
+            <span class="tech-tag">UI</span>
+        </div>
+    </header>
+
+    <div class="project-carousel" aria-label="Galería de imágenes ColdSteel">
+        <img src="../assets/images/Barcos2.png" alt="ColdSteel Escenario" class="active" />
+        <img src="../assets/images/Barcos3.png" alt="ColdSteel Unidades" />
+        <img src="../assets/images/Barcos4.png" alt="ColdSteel Combate" />
+        <img src="assets/images/Barcos5.png" alt="ColdSteel Base" />
+        <button class="prev" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="next" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="detail-content">
+        <section class="game-info">
+            <h3><i class="fas fa-gamepad"></i> Sobre el juego</h3>
+            <p>ColdSteel es un RTS de combate automático asimétrico. El jugador se enfrenta a una IA mediante un sistema de oleadas. Gestionando el oro disponible, el jugador debe elegir estratégicamente qué unidades desplegar (Melé, Tanque o Distancia). Las tropas se dirigen automáticamente a la base enemiga y entran en combate al cruzarse con rivales. El objetivo es destruir la base enemiga antes de que la tuya caiga.</p>
+
+            <div class="action-buttons">
+                <a href="../assets/files/ColdSteel_Build.zip" download="ColdSteel_Build.zip" class="btn btn-primary"><i class="fas fa-download"></i> Descargar Build</a>
+                <a href="URL_DE_TU_GITHUB" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Ver Código</a>
+            </div>
+        </section>
+
+        <section class="my-role">
+            <h3><i class="fas fa-code"></i> Mi Contribución (Trabajo en Grupo)</h3>
+            <ul class="role-list">
+                <li><strong>Programación Core:</strong> Desarrollador principal (Lead Programmer), encargado de la arquitectura completa del juego, lógica de oleadas y combate automático.</li>
+                <li><strong>Data & Balance:</strong> Desarrollo e implementación de un sistema que lee automáticamente la hoja de balanceo para actualizar las estadísticas del juego sin tocar el código.</li>
+                <li><strong>UI y Entorno:</strong> Creación técnica del entorno de juego y apoyo en la implementación del diseño de la interfaz de usuario.</li>
+                <li><strong>QA y Testeo:</strong> Participación activa en las sesiones de pruebas para ajustar el balance y coste de las unidades.</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Sergio Rivera Anguita.</p>
+</footer>
+
+<script src="../functions.js" defer></script>
+</body>
+</html>
