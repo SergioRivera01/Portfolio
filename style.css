@@ -197,6 +197,12 @@ nav ul {
     color: var(--bg-color);
 }
 
+.bottom-nav {
+    text-align: center;
+    margin-top: 4rem; /* Separa el botón del contenido de arriba */
+    padding-bottom: 2rem;
+}
+
 /* =========================================
    4. TARJETAS DE PROYECTOS
    ========================================= */
@@ -211,6 +217,14 @@ nav ul {
     font-size: 1.5rem;
     margin-bottom: 3rem;
     color: var(--accent-color);
+    text-align: center;
+}
+
+.subsection-title{
+    font-family: var(--font-titles);
+    font-size: 0.6rem;
+    margin-bottom: 3rem;
+    color: #ef7c23;
     text-align: center;
 }
 
